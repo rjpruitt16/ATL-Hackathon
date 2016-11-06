@@ -11,14 +11,17 @@ public class EnemyMovements : MonoBehaviour
     int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
     //float camRayLength = 100f;
     public float speed = 2f;
+    public int damage;
     Boolean foward = false;
     public GameObject player;
+    public PlayerHealth health;
 
     void Awake()
     {
         floorMask = LayerMask.GetMask("Floor");
         anim = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody2D>();
+        damage = 2;
     }
 
     // Update is called once per frame
@@ -44,6 +47,13 @@ public class EnemyMovements : MonoBehaviour
         playerRigidbody.MovePosition(transform.position + movement);
     }
 
+    void OnCollisionEnter2D(Collider other)
+    {
+        if (other.gameObject == player)
+        {
+            health.TakeDamage(damage);
+        }
+    }
     /*void Turning()
     {
         // Create a ray from the mouse cursor on screen in the direction of the camera.

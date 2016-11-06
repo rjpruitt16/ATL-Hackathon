@@ -6,29 +6,30 @@ public class PlayerMovemnents : MonoBehaviour
 {
     Vector3 movement;                   // The vector to store the direction of the player's movement.
     Animator anim;                      // Reference to the animator component0.
-    Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
+    Rigidbody2D playerRigidbody;          // Reference to the player's rigidbody.
     int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
     //float camRayLength = 100f;
     public float speed = 6f;
     Boolean foward = false;
-
-    Vector3 GetTransform()
-    {
-        return new Vector3();
-    }
+    public float force = 600;
 
 
     void Awake()
     {
         floorMask = LayerMask.GetMask("Floor");
         anim = GetComponent<Animator>();
-        playerRigidbody = GetComponent<Rigidbody>();
+        playerRigidbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         float h = Input.GetAxisRaw("Horizontal");
+        
+        if (Input.GetKeyDown(KeyCode.UpArrow)) {
+            if (playerRigidbody.position.y < 7)
+                playerRigidbody.AddForce(Vector2.up * force);
+        }
         // float v = Input.GetAxisRaw("Vertical");
         float v = 0f;
 

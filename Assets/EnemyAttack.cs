@@ -14,6 +14,7 @@ public class EnemyAttack : MonoBehaviour
     EnemyHealth enemyHealth;                    // Reference to this enemy's health.
     bool playerInRange;                         // Whether player is within the trigger collider and can be attacked.
     float timer;                                // Timer for counting up to the next attack.
+    public PlayerHealth phealth;
 
 
     void Awake()
@@ -24,18 +25,6 @@ public class EnemyAttack : MonoBehaviour
         enemyHealth = GetComponent<EnemyHealth>();
         anim = GetComponent<Animator>();
     }
-
-
-    void OnTriggerEnter(Collider other)
-    {
-        // If the entering collider is the player...
-        if (other.gameObject == player)
-        {
-            // ... the player is in range.
-            playerInRange = true;
-        }
-    }
-
 
     void OnTriggerExit(Collider other)
     {
@@ -75,10 +64,10 @@ public class EnemyAttack : MonoBehaviour
         timer = 0f;
 
         // If the player has health to lose...
-        if (playerHealth.currentHealth > 0)
+        if (phealth.currentHealth > 0)
         {
             // ... damage the player.
-            playerHealth.TakeDamage(attackDamage);
+            phealth.TakeDamage(attackDamage);
         }
     }
 }

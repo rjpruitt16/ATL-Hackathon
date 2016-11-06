@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class PlayerMovemnents : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class PlayerMovemnents : MonoBehaviour
     int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
     //float camRayLength = 100f;
     public float speed = 6f;
-    boolean foward = false;
+    Boolean foward = false;
 
     Vector3 GetTransform()
     {
@@ -28,7 +29,8 @@ public class PlayerMovemnents : MonoBehaviour
     void FixedUpdate()
     {
         float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        // float v = Input.GetAxisRaw("Vertical");
+        float v = 0f;
 
         Move(h, v);
         //Turning();

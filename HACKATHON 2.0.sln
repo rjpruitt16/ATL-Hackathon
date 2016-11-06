@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HACKATHON 2.0.CSharp.Plugins", "HACKATHON 2.0.CSharp.Plugins.csproj", "{14CB9535-DEB3-7861-0B0D-8814BB12B9D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HACKATHON 2.0.CSharp", "HACKATHON 2.0.CSharp.csproj", "{89E169CF-0087-3EE1-D240-2C0E87CDB9D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HACKATHON 2.0.CSharp.Editor", "HACKATHON 2.0.CSharp.Editor.csproj", "{720057D3-273A-BA0D-38EF-AE11EDF24EA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14CB9535-DEB3-7861-0B0D-8814BB12B9D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14CB9535-DEB3-7861-0B0D-8814BB12B9D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14CB9535-DEB3-7861-0B0D-8814BB12B9D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14CB9535-DEB3-7861-0B0D-8814BB12B9D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89E169CF-0087-3EE1-D240-2C0E87CDB9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89E169CF-0087-3EE1-D240-2C0E87CDB9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89E169CF-0087-3EE1-D240-2C0E87CDB9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89E169CF-0087-3EE1-D240-2C0E87CDB9D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{720057D3-273A-BA0D-38EF-AE11EDF24EA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{720057D3-273A-BA0D-38EF-AE11EDF24EA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{720057D3-273A-BA0D-38EF-AE11EDF24EA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{720057D3-273A-BA0D-38EF-AE11EDF24EA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
